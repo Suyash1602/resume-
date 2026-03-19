@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suyash Khandalkar – React Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      font-size: 13px;
+      color: #1a1a1a;
+      background: #f0f2f5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 40px 48px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+      border-radius: 4px;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2.5px solid #1a56db;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+    }
+
+    .title-tag {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1a56db;
+      margin: 3px 0 10px;
+      letter-spacing: 0.2px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 12px;
+      color: #374151;
+    }
+
+    .contact a {
+      color: #1a56db;
+      text-decoration: none;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #1a56db;
+      border-bottom: 1px solid #dbeafe;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    .summary p {
+      line-height: 1.6;
+      color: #374151;
+      font-size: 12.5px;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 2px 0;
+    }
+
+    .skill-cat {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 12px;
+      padding: 2px 0;
+    }
+
+    .skill-val {
+      color: #374151;
+      font-size: 12px;
+      padding: 2px 0;
+      border-bottom: 1px dashed #f1f5f9;
+    }
+
+    /* Experience */
+    .job {
+      margin-bottom: 14px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .job-title {
+      font-weight: 800;
+      font-size: 13.5px;
+      color: #0f172a;
+    }
+
+    .job-date {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .job-company {
+      font-size: 12.5px;
+      color: #1a56db;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .job ul, .project ul {
+      padding-left: 16px;
+    }
+
+    .job li, .project li {
+      margin-bottom: 4px;
+      line-height: 1.5;
+      color: #374151;
+    }
+
+    /* Projects */
+    .project {
+      margin-bottom: 12px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .project-name {
+      font-weight: 800;
+      font-size: 13px;
+      color: #0f172a;
+    }
+
+    .project-stack {
+      font-size: 11.5px;
+      color: #6b7280;
+      font-weight: 400;
+    }
+
+    .project-link {
+      font-size: 11.5px;
+      color: #1a56db;
+      text-decoration: none;
+    }
+
+    /* Layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 32px;
+    }
+
+    .cert-item, .edu-item {
+      margin-bottom: 8px;
+    }
+
+    .cert-name, .edu-degree {
+      font-weight: 700;
+      font-size: 13px;
+      color: #0f172a;
+    }
+
+    .cert-issuer, .edu-school, .edu-meta {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    /* PRINT OPTIMIZATION */
+    @media print {
+      @page {
+        margin: 0;
+        size: A4;
+      }
+      body {
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page {
+        box-shadow: none;
+        margin: 0;
+        padding: 40px 48px;
+        width: 100%;
+        max-width: 100%;
+      }
+      .contact a::after {
+        content: none !important; /* Prevents showing URL next to links */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="name">Suyash Sanjay Khandalkar</div>
+      <div class="title-tag">React Developer · 3+ Years Experience · AWS Certified</div>
+      <div class="contact">
+        <span>📍 Pune, India</span>
+        <span>📞 9011280834</span>
+        <a href="mailto:yashkhandalkar04@gmail.com">yashkhandalkar04@gmail.com</a>
+        <a href="https://github.com/Suyash1602">github.com/Suyash1602</a>
+        <a href="https://linkedin.com/in/suyash-khandalkar">linkedin.com/in/suyash-khandalkar</a>
+      </div>
+    </div>
+
+    <div class="section summary">
+      <div class="section-title">Professional Summary</div>
+      <p>
+        React Developer with 3+ years of enterprise experience at Cognizant, specialising in
+        scalable component architectures, frontend performance optimization, and real-time UI systems. Built a React +
+        TypeScript library component adopted across multiple product modules, and delivered a ~15%
+        reduction in page load times through advanced memoization and state management strategies. AWS
+        Certified with hands-on experience across the full MERN stack, GraphQL, and WebSocket-driven real-time
+        interfaces.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-cat">Frontend</div>
+        <div class="skill-val">React, TypeScript, JavaScript (ES6+), Next.js, Redux Toolkit, Zustand, Context API</div>
+        <div class="skill-cat">Performance</div>
+        <div class="skill-val">React.memo, useMemo, useCallback, Lazy loading, Code splitting, Render optimization</div>
+        <div class="skill-cat">Testing</div>
+        <div class="skill-val">Jest, React Testing Library (RTL)</div>
+        <div class="skill-cat">Styling</div>
+        <div class="skill-val">Tailwind CSS, Material UI, HTML5, CSS3, Responsive Design</div>
+        <div class="skill-cat">Backend</div>
+        <div class="skill-val">Node.js, Express.js, GraphQL, REST APIs, WebSockets, Axios</div>
+        <div class="skill-cat">Databases</div>
+        <div class="skill-val">MongoDB, MySQL, Firebase</div>
+        <div class="skill-cat">Tools & Cloud</div>
+        <div class="skill-val">Vite, Git, GitHub, Postman, Jira, Agile/Scrum, AWS (Certified)</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Work Experience</div>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Software Developer — React </div>
+          <div class="job-date">Jan 2023 – Present</div>
+        </div>
+        <div class="job-company">Cognizant Technology Solutions, Pune</div>
+        <ul>
+          <li>Architected and maintained a React + TypeScript UI component library adopted across multiple enterprise modules, cutting feature development time by 30%.</li>
+          <li>Led performance initiatives—applying React.memo and state normalisation—achieving a ~15% reduction in page load times.</li>
+          <li>Designed a real-time chatbot interface using WebSockets for live operational feedback during cloud migrations.</li>
+          <li>Integrated distributed REST APIs and microservices with robust error boundaries and loading state patterns.</li>
+          <li>Wrote unit and integration tests using Jest and RTL, improving component reliability for shared modules.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Software Development Intern</div>
+          <div class="job-date">Feb 2022 – Nov 2022</div>
+        </div>
+        <div class="job-company">Cognizant Technology Solutions, Pune</div>
+        <ul>
+          <li>Built a full-stack admin dashboard with JWT authentication and role-based access control using React and Node.js.</li>
+          <li>Optimised Express.js APIs and MongoDB query patterns, improving average response times by ~20%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Projects</div>
+      <div class="project">
+        <div class="project-header">
+          <div class="project-name">Airbnb Clone <span class="project-stack">| React, Tailwind, Redux, Node, MongoDB</span></div>
+          <a class="project-link" href="https://github.com/Suyash1602/airBNB-clone">github.com/Suyash1602/airBNB-clone</a>
+        </div>
+        <ul>
+          <li>Developed a responsive platform with dynamic property search and booking-style interactions.</li>
+          <li>Implemented Redux Toolkit for global state management and modular architecture.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <div class="project-name">Finance Tracker <span class="project-stack">| React, Firebase, Node, PapaParse</span></div>
+          <a class="project-link" href="https://github.com/Suyash1602/FinanceTracker">github.com/Suyash1602/FinanceTracker</a>
+        </div>
+        <ul>
+          <li>Built a secure management app with Google OAuth and CSV import/export functionality.</li>
+          <li>Utilized React Hook Form for performant, validated transaction flows.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title">Certifications</div>
+        <div class="cert-item">
+          <div class="cert-name">AWS Certified Cloud Practitioner</div>
+          <div class="cert-issuer">Amazon Web Services</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">AWS Certified AI Practitioner</div>
+          <div class="cert-issuer">Amazon Web Services</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <div class="edu-degree">B.E. Information Technology</div>
+          <div class="edu-school">Priyadarshini College of Engineering</div>
+          <div class="edu-meta">Graduated 2022 · CGPA: 8.25 / 10</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
